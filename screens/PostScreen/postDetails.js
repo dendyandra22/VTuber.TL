@@ -15,7 +15,8 @@ const Post = ({navigation}) => {
   
 
   return (
-    <Provider store={store}>                
+    <Provider store={store}>       
+      <View style={{height:28}}/>            
       <PostWrap />
     </Provider>
     
@@ -38,8 +39,9 @@ const PostWrap = () => {
 
   // const image = {uri: "https://i.ytimg.com/vi/TkV65v81ABM/maxresdefault.jpg"}; 
   
-  return(
-  <ScrollView style={{marginBottom: 16}}>
+  return(          
+    <ScrollView>
+    
     <View>            
         <ImageBackground source={image} style={styles.Image} resizeMode="stretch" borderBottomLeftRadius={30} borderBottomRightRadius={30}>
           <TouchableOpacity style={{position: "absolute", left: 16, top: 28, backgroundColor: '#ff6200', padding: 6, borderRadius: 40}} onPress={goToHome}>
@@ -47,19 +49,20 @@ const PostWrap = () => {
           </TouchableOpacity>
         </ImageBackground>                 
     </View>
-    <View>
+    <View style={styles.container}>
       <Text style={styles.TextTitle}>{title}</Text>
       <View style={{flex: 1, flexDirection: "row", alignItems: "center"}}>
-        <Text style={styles.TextSubTitle}>by</Text>
-        <TouchableOpacity><Text style={{fontSize: 16 ,color: '#ff6200'}}>Hololive Indonesia </Text></TouchableOpacity>
-        <Octicons name="verified" size={14} color="#ff6200"/>        
+        <Text style={styles.TextSubTitle}>by </Text>
+        <TouchableOpacity><Text style={{fontSize: 16 ,color: '#ff6200', marginBottom: 8}}>Hololive Indonesia </Text></TouchableOpacity>
+        <Octicons name="verified" size={14} color="#ff6200" style={{marginBottom: 8}}/>        
       </View>
     </View>    
-    <View style={{flex: 1, flexDirection: "row", paddingLeft: 4, paddingRight: 4}}>
+    <View style={styles.container}>
       <TouchableOpacity style={styles.Button}><Text style={styles.TextButton}>Watch Now</Text></TouchableOpacity>        
     </View>
-    <View style={{flex: 1, flexDirection: "row", paddingLeft: 4, paddingRight: 4}}>
+    <View style={{flex: 1, flexDirection: "row", marginHorizontal: 16}}>
       <TouchableOpacity style={styles.Button}><Text style={styles.TextButton}>Favorite</Text></TouchableOpacity>
+      <View style={{width:8}}/>
       <TouchableOpacity style={styles.Button}><Text style={styles.TextButton}>Watch Later</Text></TouchableOpacity>
     </View>
     <View style={styles.container}>        
@@ -89,7 +92,8 @@ const PostWrap = () => {
     <View style={styles.container}>
       <SuggestStream/>
     </View>
-  </ScrollView>
+    <View style={{marginBottom: 16}}/>
+  </ScrollView>  
   );
 }
 

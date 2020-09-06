@@ -24,16 +24,16 @@ export const SuggestStream = () => {
 
     return(
         <ScrollView>
-            <View style={{justifyContent: "space-between", flexDirection: "row", alignContent: "center"}}>
+            <View style={{justifyContent: "space-between", flexDirection: "row", alignItems: "center"}}>
                 <Text style={styles.TextHeading}>Watch Next</Text>
                 <Text style={{color:"#ff6200", fontWeight: "bold", padding: 20}}>View All</Text>
             </View>
-            <View>
+            <View >
                 <FlatList 
                     data={suggest}
                     horizontal={true}
                     showsHorizontalScrollIndicator={false}
-                    keyExtractor={(item) => item.image}
+                    keyExtractor={(item) => item.key}
                     renderItem={({item}) => {
                         return(
                             <View style={{paddingLeft: 16}}>

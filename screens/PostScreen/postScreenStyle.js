@@ -2,7 +2,7 @@ import { StyleSheet, Dimensions } from "react-native";
 
 export default StyleSheet.create({
     container: {
-      marginLeft: 8
+      marginHorizontal: 16
     },
     Image: {
       height: 240,  
@@ -11,11 +11,11 @@ export default StyleSheet.create({
     TextTitle: {    
       fontWeight: "bold",
       fontSize: 28,
-      marginLeft: 8,
+      
     },
     TextSubTitle: {
       fontSize: 16,   
-      margin: 8 
+      marginBottom: 8
     },
     TextHeading: {    
       fontWeight: "bold",
@@ -38,7 +38,7 @@ export default StyleSheet.create({
       backgroundColor: "#ff6200",
       fontWeight: "bold",
       flex: 1,
-      margin: 4,
+      marginVertical: 4,
       height: 38,
       justifyContent: "center"
     }

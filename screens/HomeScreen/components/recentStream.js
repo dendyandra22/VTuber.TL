@@ -34,7 +34,7 @@ export const RecenttStream = () => {
                     data={recent}
                     horizontal={true}
                     showsHorizontalScrollIndicator={false}
-                    keyExtractor={(item) => item.image}
+                    keyExtractor={(item) => item.key}
                     renderItem={({item}) => {
                         return(
                             <View style={{paddingLeft: 16}}>

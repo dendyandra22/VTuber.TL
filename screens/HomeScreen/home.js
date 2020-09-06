@@ -23,11 +23,13 @@ const HomeWrap = () => {
     const image = {uri: "https://assets.st-note.com/production/uploads/images/18226002/rectangle_large_type_2_f27f09da9e99c790802749b41d96a271.png?fit=bounds&quality=60&width=1280"};
     
 
-    return (
-        <View style={{flexGrow: 1, height: Dimensions.get("window").height, paddingBottom: 24}}>            
-            <ScrollView sty>
+    return (        
+        <View style={{flexGrow: 1, height: Dimensions.get("window").height}}>     
+        <View style={{height:28}}/>       
+            <ScrollView>                
                 <View style={{height: 270}}>                
                     <ImageBackground
+                        resizeMode='cover'
                         source={image}
                         style={styles.ImageHeader}
                         imageStyle={{borderBottomRightRadius: 65}}
@@ -66,6 +68,7 @@ const HomeWrap = () => {
                 <TrendingStream />
                 <LatestStream/>
                 <RecenttStream/>
+                <View style={{marginBottom: 16}}/>
             </ScrollView>
             
         </View>

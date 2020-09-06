@@ -34,7 +34,7 @@ export const TrendingStream = () => {
                     data={trending}
                     horizontal={true}
                     showsHorizontalScrollIndicator={false}
-                    keyExtractor={(item) => item.image}
+                    keyExtractor={(item) => item.key}
                     renderItem={({item}) => {
                         return(
                             <View style={{paddingLeft: 16}}>
