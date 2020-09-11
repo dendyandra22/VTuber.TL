@@ -97,8 +97,5 @@ const PostWrap = () => {
   );
 }
 
-const mapState = (state) => {
-  return {uri: state.uri}
-}
 
 export default Post;

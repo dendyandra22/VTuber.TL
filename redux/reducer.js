@@ -2,7 +2,8 @@
 
 const initialState = {
     title : "XXX",    
-    uri: 'https://i.ytimg.com/vi/ky3QozZIFfU/maxresdefault.jpg'
+    uri: 'https://i.ytimg.com/vi/ky3QozZIFfU/maxresdefault.jpg',
+    id: ''
 }
 
 export const Reducer = (state = initialState, action) => {
@@ -12,7 +13,12 @@ export const Reducer = (state = initialState, action) => {
                 ...state, 
                 uri: action.payload.uri,
                 title: action.payload.title
-            } 
+            };
+        case 'USER_LOGIN' :
+            return{
+                ...state,
+                id: action.payload.id
+            }
         
     }
     return (state);

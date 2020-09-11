@@ -1,0 +1,21 @@
+{
+  "users" : {
+    "eFu0F8Tc5HgGxrFFOFYqRITj67I3" : {
+      "email" : "awa@kfd.xoi",
+      "id" : "eFu0F8Tc5HgGxrFFOFYqRITj67I3",
+      "username" : "awa"
+    },
+    "nEDkkETBmROhS19xLZc9USeggEJ2" : {
+      "email" : "dend@jdks.xom",
+      "id" : "nEDkkETBmROhS19xLZc9USeggEJ2",
+      "username" : "ds"
+    }
+  },
+  "streams" : {
+      "risu": {
+        "risu01": {
+            "stream_name": ""
+        }
+      }
+  }
+}

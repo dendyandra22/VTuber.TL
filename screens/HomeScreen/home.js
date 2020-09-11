@@ -7,6 +7,8 @@ import {store} from '../../redux/store'
 import {TrendingStream} from "./components/trendingStream";
 import { LatestStream } from "./components/latestStream";
 import { RecenttStream } from "./components/recentStream";
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { useNavigation } from "@react-navigation/native";
 
 const Home = () => {
     return(
@@ -22,6 +24,7 @@ const HomeWrap = () => {
     // const image = {uri: "https://i0.wp.com/urbandigital.id/wp-content/uploads/2018/12/20180511.jpg?fit=768%2C380&ssl=1"};
     const image = {uri: "https://assets.st-note.com/production/uploads/images/18226002/rectangle_large_type_2_f27f09da9e99c790802749b41d96a271.png?fit=bounds&quality=60&width=1280"};
     
+    const navigation = useNavigation();
 
     return (        
         <View style={{flexGrow: 1, height: Dimensions.get("window").height}}>     
@@ -41,6 +44,7 @@ const HomeWrap = () => {
                         </View>
                         <View>
                             <TextInput
+                                on
                                 style={styles.SearchBox}
                                 placeholder='Search Clip'
                                 placeholderTextColor='#666'
@@ -53,11 +57,15 @@ const HomeWrap = () => {
                                 opacity: 0.6
                             }} />                        
                         </View>
-                        <Feather name='menu' size={22} color='#fff' style={{
-                            position: "absolute",
-                            top: 40,
-                            left: 16
-                        }} />
+                        <View style={{
+                                position: "absolute",
+                                top: 40,
+                                left: 16
+                            }} >
+                            <TouchableOpacity onPress={() => navigation.openDrawer()}>
+                                <Feather name='menu' size={22} color='#fff' />
+                            </TouchableOpacity>
+                        </View>
                         <Feather name='bell' size={22} color='#fff' style={{
                             position: "absolute",
                             top: 40,
